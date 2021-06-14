@@ -1,0 +1,7 @@
+<div class="container">
+<h1>User List</h1>
+Logged in as <%= current_user.name %>
+<% @users.each do |user| %>
+    <h2><%= user.name %></h2>
+<% end %>
+</div>
