@@ -1,0 +1,14 @@
+<div class="text-center">
+    <h1>New Category</h1>
+    <%= form_with model: @category do |f| %>
+      <div>
+        <%= f.text_field :name,placeholder:'name' %>
+      </div>
+      <%= f.submit :create %><br>
+    <% end %>
+    <div class=''>
+      <%= link_to 'Back', root_path %>
+    </div>
+</div>
+  
+  

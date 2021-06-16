@@ -1,5 +1,11 @@
 <div>
   <%= form_with model: @article do |form| %>
+
+    <%= form.label :category, class:'m-2' %>
+    <div class='opacity1'>
+    <%= collection_select(:article, :category_id,Category.all, :id, :name)%>  
+    </div>
+
     <div>
       <%= form.label :title %><br>
       <%= form.text_field :title, class: 'form-control' %>
@@ -28,6 +34,7 @@
       <%= form.submit %>
     </div>
   <% end %>
+  <%= link_to 'Back', root_path, class:'btn btn-light opacity1' %>
 </div>
 
   
