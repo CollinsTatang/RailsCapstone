@@ -7,6 +7,8 @@ class ArticlesController < ApplicationController
 
     def new
         @article = Article.new
+        @subjects = Category.all
+        @category_options = Category.all.map { |cate| [cate.name, cate.id] }
     end
 
     def show
@@ -51,7 +53,7 @@ class ArticlesController < ApplicationController
 
       private
       def article_params
-         params.require(:article).permit(:title, :text, :image)
+         params.require(:article).permit(:title, :text, :image, :category_id)
       end
       
 end
