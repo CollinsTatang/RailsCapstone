@@ -5,7 +5,5 @@ Rails.application.routes.draw do
   get 'logout', to: 'sessions#destroy'
   post 'Sign_up', to: 'users#create'
   resources :articles
-  resources :users do
-    
-  end
+  resources :categories, only: %i[new create show index]
 end

@@ -4,10 +4,12 @@ one:
   title: MyString
   text: MyText
   image: MyString
-  user_id: one
+  user: one
+  category: one
 
 two:
   title: MyString
   text: MyText
   image: MyString
-  user_id: two
+  user: two
+  category: two
