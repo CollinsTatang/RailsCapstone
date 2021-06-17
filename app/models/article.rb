@@ -1,6 +1,7 @@
 class Article < ApplicationRecord
+
+  include ImageUploader::Attachment(:image)
   belongs_to :user
-  has_one_attached :image
   validates :user_id, presence: true
 
   validates :title, presence: true

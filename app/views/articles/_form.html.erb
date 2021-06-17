@@ -17,14 +17,16 @@
     <div>
       <%= form.label :text %><br>
       <%= form.text_area :text, class: 'form-control' %><br>
+
       <% article.errors.full_messages_for(:text).each do |message| %>
         <div><%= message %></div>
       <% end %>
     </div>
 
-    <div class="form-group">
-      <%= form.label 'Add Image' %><br>
-      <%= form.file_field :image, class: 'form-control' %><br>
+    <div class="field">
+    <%= form.label :image %>
+    <%= form.file_field :image, class: 'form-control' %>
+      
       <% article.errors.full_messages_for(:image).each do |message| %>
         <div><%= message %></div>
       <% end %>

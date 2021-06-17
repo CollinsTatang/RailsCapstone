@@ -2,9 +2,8 @@
 
 <p><%= @article.text %></p>
 
-<% if @article.image.attached? %>
-  <image src="<%= (url_for(@article.image)) %>">
-  <% end %>
+<%= image_tag @article.image_url if @article.image %>
+
 
 <ul>
   <li><%= link_to "Edit", edit_article_path(@article) %></li>
