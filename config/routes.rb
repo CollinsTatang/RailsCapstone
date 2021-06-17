@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :sessions , only: [:new, :create]
   get 'logout', to: 'sessions#destroy'
   post 'Sign_up', to: 'users#create'
-  resources :articles
+  resources :articles do
+    resources :votes, only: %i[create destroy]
+  end
   resources :categories, only: %i[new create show index]
 end
