@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
-    before_action :require_login, except: [:index]
-    include ArticlesHelper
+  before_action :require_login, except: [:index]
+  include ArticlesHelper
   def index
     @categories = Category.all.limit(5)
     @nav_categories = Category.all.limit(7)
