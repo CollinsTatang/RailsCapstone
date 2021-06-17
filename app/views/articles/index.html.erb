@@ -8,6 +8,10 @@
     <li>
     <%= article.text %>
     </li>
+    <% unless article.image == nil %>
+    
+    <%= image_tag article.image_url if article.image %>
+    <% end %>
   <% end %>
 </ul>
 
