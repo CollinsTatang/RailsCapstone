@@ -20,7 +20,7 @@
 
 ## Live Demo
 Deployment 
-[CamCulture Article ](hhttps://safe-ravine-92207.herokuapp.com/)
+[CamCulture Article ](https://safe-ravine-92207.herokuapp.com/)
 
 
 
