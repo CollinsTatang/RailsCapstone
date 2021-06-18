@@ -8,8 +8,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @category_articles = Article.where('category_id = ?', 
-    params[:id]).order(created_at: :desc)
+    @category_articles = Article.where('category_id = ?', params[:id]).order(created_at: :desc)
     @category = Category.find(params[:id])
   end
 
