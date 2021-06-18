@@ -34,10 +34,11 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.8'
   gem 'capybara', '>= 3.26'
   gem 'dotenv-rails'
-  gem 'image_processing', '~> 1.2'
-  gem 'shrine', '~> 3.3'
-  gem 'shrine-cloudinary', '~> 1.1'
 end
+
+gem 'image_processing', '~> 1.2'
+gem 'shrine', '~> 3.3'
+gem 'shrine-cloudinary', '~> 1.1'
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
