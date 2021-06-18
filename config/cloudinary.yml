@@ -5,8 +5,8 @@ development:
   enhance_image_tag: true
   static_file_support: false
 production:
-  cloud_name:
-  api_key: 'tatangtech'
+  cloud_name: tatangtech
+  api_key: '388455595119354'
   api_secret: usWHzmRlRpnLDg4wr9MRfMFclAA
   enhance_image_tag: true
   static_file_support: true
