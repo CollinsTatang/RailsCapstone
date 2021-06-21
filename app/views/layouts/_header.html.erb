@@ -8,36 +8,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-
-            <% if current_user %> 
-
-                <li class="nav-item">
-                <%= link_to "Home", root_path, class: 'nav-link' %>
-                </li>
-                <li class="nav-item">
-                <%= link_to "Create Article", new_article_path, class: 'nav-link' %>
-                </li>
-                <li class="nav-item">
-                <%= link_to "Create Category", new_category_path, class: 'nav-link' %>
-                </li>
-                <li class="nav-item "> 
-                <%= link_to 'Logout', logout_path, class: 'nav-link' %>
-                </li>
-
-            <% else %>
-           
-                <li class="nav-item">
-                <%= link_to "Home", root_path, class: 'nav-link' %>
-                </li>
-                <li class="nav-item ">
-                <%= link_to 'Login', new_session_path, class: 'nav-link' %>
-                </li>
-                
-                <li class="nav-item ">
-                <%= link_to 'Sign up', new_user_path, class: 'nav-link' %>
-                </li>
-                
-            <% end %>
+                <%= user_sessions%>
             </ul>
         </div>
     </nav>

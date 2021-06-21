@@ -1,7 +1,11 @@
 <h1><%= @article.title %></h1>
-
 <p><%= @article.text %></p>
-
+<div class='position-absolute bottom-0 start-50 fs-6 '>
+   <%= @article.votes.count%>
+</div>
+<div class='position-absolute bottom-0 fs-6 d-flex'>
+  <%= vote(@article)%>
+</div><br>
 <%= image_tag @article.image_url if @article.image %>
 
 
