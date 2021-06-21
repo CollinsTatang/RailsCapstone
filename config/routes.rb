@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root 'articles#index' 
+  get 'home/index'
+  root to: "home#index" 
   resources :users, only: [:new, :create, :show]
   resources :sessions , only: [:new, :create]
   get 'logout', to: 'sessions#destroy'
