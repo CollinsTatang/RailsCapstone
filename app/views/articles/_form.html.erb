@@ -1,4 +1,4 @@
-<div>
+<div class="container">
   <%= form_with model: @article do |form| %>
 
     <%= form.label :category, class:'m-2' %>
@@ -30,13 +30,13 @@
       <% article.errors.full_messages_for(:image).each do |message| %>
         <div><%= message %></div>
       <% end %>
-    </div>
+    </div><br>
   
     <div>
       <%= form.submit %>
-    </div>
+    </div><br>
   <% end %>
-  <%= link_to 'Back', root_path, class:'btn btn-light opacity1' %>
+  <%= link_to 'Back', root_path, class:'btn btn-primary' %>
 </div>
 
   
