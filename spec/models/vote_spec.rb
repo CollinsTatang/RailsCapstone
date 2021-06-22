@@ -2,10 +2,10 @@
 require 'rails_helper'
 RSpec.describe Vote, type: :model do
   describe 'ActiveRecord associations' do
-    it 'has many comments' do
+    it 'has many votes' do
       expect { should belong_to(users) }
     end
-    it 'belong to  article' do
+    it 'belong to  articles' do
       expect { should belong_to(articles) }
     end
     it 'belong to user' do
