@@ -9,5 +9,5 @@ class Article < ApplicationRecord
   has_many :votes
   belongs_to :category
 
-  scope :order_by_most_recent, -> { includes(:category).order(created_at: :desc)}
+  scope :order_by_most_recent, -> { includes(:category).order(created_at: :desc) }
 end
