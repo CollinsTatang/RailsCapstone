@@ -1,0 +1,42 @@
+<div class="container">
+  <%= form_with model: @article do |form| %>
+
+    <%= form.label :category, class:'m-2' %>
+    <div class='opacity1'>
+    <%= collection_select(:article, :category_id,Category.all, :id, :name)%>  
+    </div>
+
+    <div>
+      <%= form.label :title %><br>
+      <%= form.text_field :title, class: 'form-control' %>
+      <% article.errors.full_messages_for(:title).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+  
+    <div>
+      <%= form.label :text %><br>
+      <%= form.text_area :text, class: 'form-control' %><br>
+
+      <% article.errors.full_messages_for(:text).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+
+    <div class="field">
+    <%= form.label :image %>
+    <%= form.file_field :image, class: 'form-control' %>
+      
+      <% article.errors.full_messages_for(:image).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div><br>
+  
+    <div>
+      <%= form.submit %>
+    </div><br>
+  <% end %>
+  <%= link_to 'Back', root_path, class:'btn btn-primary' %>
+</div>
+
+  

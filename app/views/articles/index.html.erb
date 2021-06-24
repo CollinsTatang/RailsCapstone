@@ -1,0 +1,17 @@
+<div class="container-fluid">
+  <div class="row d-flex ">
+   <% @articles.each do |article| %>
+      <div class="col-md-3 mb-5">
+      <% unless article.image == nil %>
+          <%= image_tag article.image_url if article.image %>
+      <% end %>
+      </div>
+      <div class="col-md-3">
+            <%= link_to article.title, article_path(article), class:"h3"%>
+            <hr>
+            <p> <%= article.text.first(80) %> </p>
+            <%= link_to "SEE MORE ", article_path(article), class:" card-link small"%>
+      </div>     
+    <% end %>
+  </div>
+</div>
