@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="text-center">
+    <h1>New Category</h1>
+    <%= form_with model: @category do |f| %>
+      <div>
+        <%= f.text_field :name,placeholder:'name' %>
+      </div><br>
+      <%= f.submit :Create %>
+    <% end %>
+    <div class=''><br>
+      <%= link_to 'Back', root_path, class: 'btn btn-primary' %>
+    </div>
+  </div>
+</div>
+
+  
+  

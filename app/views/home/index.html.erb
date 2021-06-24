@@ -1,0 +1,37 @@
+<div class="row container-fluid h-100 m-0  big-section">
+  <% @articles.each do |article| %>
+    <div class="card col-lg-12 col-md-12 col-sm-12 col-xs-12  border-0">
+     
+        <%= image_tag article.image.url ,class:"img-fluid hv-100"%>
+        <div class="card-img-overlay  text-white d-flex d-flex align-items-end mt-auto h-25 ">
+          <%= link_to article.title, article_path(article),class:"text-orange w-50 h-50 ml-5 mt-2 p-3 "%>
+        </div>
+    </div>
+  <%end%>
+</div>
+ 
+
+<div class="row container-fluid m-0 border-0">
+      <div class="col d-flex">
+          <% @categories.each do |c|%>
+              <% @articles.each do |article| %>
+                 <% if c.articles.last == article %>
+                   <div class="card text-white w-100">
+                     <%=  image_tag article.image.url, class: "img-fluid w-100 h-100" %>
+                       <div class="card-img-overlay w-100">
+                             
+                                <span class="w-auto" ><%= link_to c.name.upcase, category_path(c), class:"text-uppercase"%></span>
+                             
+                      
+                             <div class="d-flex align-items-end mt-4 h-75 small">
+                                <%= link_to article.title, article_path(article),class:"text-white" %> 
+                             </div>
+
+                        </div>
+
+                        </div>
+                   <%end%>
+               <%end%>
+            <%end%>
+       </div>
+    </div>
