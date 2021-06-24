@@ -1,5 +1,6 @@
-<h1> User Login </h1>
-<%= form_with url: sessions_path do |form| %>
+<div class="container">
+  <h1> User Login </h1>
+  <%= form_with url: sessions_path do |form| %>
   
     <div class="field">
       <%= form.label :name %>
@@ -10,3 +11,4 @@
       <%= form.submit "Login" %>
     </div>
   <% end %>
+</div>
